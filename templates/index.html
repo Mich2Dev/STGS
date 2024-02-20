@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Stream</title>
+</head>
+<body>
+
+    
+    <img src="{{ url_for('video_feed') }}" style="width: 100%;">
+    
+    
+    
+    <form action='/start_detection' method='POST'> 
+        <input type="hidden" name="enviar">
+        <input type="submit" value="enviar">
+    </form>
+    
+     <form action='/stop_processes' method='POST'>
+        <input type="hidden" name="detener">
+        <input type="submit" value="Detener Procesos">
+    </form>
+</body>
+</html>
